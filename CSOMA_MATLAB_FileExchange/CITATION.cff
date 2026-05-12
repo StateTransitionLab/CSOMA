@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use CSOMA, please cite the accompanying manuscript and software."
+title: "CSOMA: Competitive Swarm Optimizer with Mutated Agents"
+authors:
+  - family-names: "Cui"
+    given-names: "Eliuvish"
+  - family-names: "Zhang"
+    given-names: "Zizhao"
+  - family-names: "Wong"
+    given-names: "Weng Kee"
+license: "MIT"
+repository-code: "https://github.com/ElvisCuiHan/CSOMA"
