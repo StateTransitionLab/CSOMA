@@ -58,7 +58,7 @@ The logistic-design example includes a sensitivity-function diagnostic that help
 </p>
 
 <p align="center">
-  <em>Figure 2: The sensitivity function of design.</em>
+  <em>Figure 1: The sensitivity function of design.</em>
 </p>
 
 The copula examples illustrate both optimization and dependence modeling use cases, from Gaussian copula design through pseudo-likelihood estimation and higher-dimensional structured dependence:
@@ -68,7 +68,7 @@ The copula examples illustrate both optimization and dependence modeling use cas
 </p>
 
 <p align="center">
-  <em>Figure 1: Illustrative copula dependence structures. The left and middle panels show contour plots of Gaussian and Clayton copula densities on the unit square. The right panel sketches a four-variable C-vine in which high-dimensional dependence is built from pair-copula components.</em>
+  <em>Figure 2: Illustrative copula dependence structures. The left and middle panels show contour plots of Gaussian and Clayton copula densities on the unit square. The right panel sketches a four-variable C-vine in which high-dimensional dependence is built from pair-copula components.</em>
 </p>
 
 ## Quickstart
