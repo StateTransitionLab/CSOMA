@@ -41,6 +41,7 @@ At the core, `csoma` minimizes a scalar objective function over lower and upper 
 | Layer | Main files | Purpose |
 | --- | --- | --- |
 | Core optimizer | [`src/csoma.m`](src/csoma.m) | Minimize a scalar objective over box constraints using the CSO-MA update rule with optional seeded reproducibility and iteration history. |
+| Setup helper | [`csoma_setup.m`](csoma_setup.m) | Add the package source, examples, and replication directories to the MATLAB path from the repository root. |
 | Path helper | [`src/csoma_addpaths.m`](src/csoma_addpaths.m) | Add the package source and example directories to the MATLAB path after `src/` is available. |
 | Fast replication | [`replication/run_all.m`](replication/run_all.m) | Run the lightweight end-to-end example suite intended for quick package verification. |
 | Design examples | [`examples/logistic_design/`](examples/logistic_design), [`examples/copula_design/`](examples/copula_design), [`examples/riemannian_design/`](examples/riemannian_design) | Show how CSOMA can optimize approximate designs in Euclidean and manifold settings. |
@@ -71,6 +72,20 @@ The copula examples illustrate both optimization and dependence modeling use cas
   <em>Figure 2: Illustrative copula dependence structures. The left and middle panels show contour plots of Gaussian and Clayton copula densities on the unit square. The right panel sketches a four-variable C-vine in which high-dimensional dependence is built from pair-copula components.</em>
 </p>
 
+## Installation
+
+After downloading or cloning the repository, open MATLAB in the repository root and run:
+
+```matlab
+csoma_setup
+```
+
+Then confirm the core optimizer is visible:
+
+```matlab
+which csoma
+```
+
 ## Quickstart
 
 Recommended environment: MATLAB with base functionality. Some advanced examples additionally use Statistics and Machine Learning Toolbox routines such as `mvnrnd`, `wishrnd`, `gamrnd`, and `normrnd`.
@@ -79,8 +94,7 @@ From MATLAB, move to the repository root and run:
 
 ```matlab
 cd('path/to/CSOMA')
-addpath('src')
-csoma_addpaths
+csoma_setup
 run(fullfile('replication', 'run_all.m'))
 ```
 
@@ -144,6 +158,7 @@ Most scripts print numerical summaries directly to the MATLAB command window. Th
 
 | Symbol | Role |
 | --- | --- |
+| `csoma_setup` | Root-level setup helper that adds the main toolbox folders to the MATLAB path. |
 | `csoma` | Main optimizer. Returns the best objective value, best parameter vector, and optionally the iteration history. |
 | `csoma_addpaths` | Convenience helper to add `src/` and the example tree to the MATLAB path. |
 
@@ -193,6 +208,7 @@ CSOMA/
 |-- src/
 |   |-- csoma.m                     # Core optimizer
 |   `-- csoma_addpaths.m            # MATLAB path helper
+|-- csoma_setup.m                   # Root-level MATLAB setup entry point
 |-- CITATION.cff
 |-- LICENSE
 |-- MANIFEST.md

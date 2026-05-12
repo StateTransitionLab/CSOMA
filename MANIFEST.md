@@ -7,6 +7,7 @@ This file lists the files intended for the JSS code supplement.
 - `README.md`: package overview and quick-start instructions.
 - `LICENSE`: MIT license text.
 - `MANIFEST.md`: this manifest.
+- `csoma_setup.m`: root-level MATLAB path setup helper.
 
 ## Source
 
